@@ -1,0 +1,253 @@
+:root {
+  --main-color: #0078ff;
+  --secondary-color: #cde1f8;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+.pull-right {
+  float: right;
+}
+/* Navbar */
+.navbar ul li {
+  position: relative;
+  
+}
+
+.navbar ul li:first-child a::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 40px;
+  background-color: #000;
+  left: 0;
+  bottom: 5px;
+  transform: translateX(20%);
+}
+
+.navbar ul li a::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 0px;
+  background-color: #000;
+  left: 0;
+  bottom: 5px;
+  transform: translateX(20%);
+  transition: width .5s;
+}
+
+.navbar ul li:hover a::after {
+  width: 40px;
+}
+
+.btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  height: 50px;
+  width: 50px;
+  z-index: 999;
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+
+.btn-top a {
+  position: fixed;
+  height: 20px;
+  width: 20px;
+  border: 3px solid #fff;
+  border-style: none none solid solid;
+  transform: rotate(135deg) translateX(10%) translateY(-120%);
+}
+
+/* CAPTION */
+.caption h2 {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.caption p {
+  position: relative;
+}
+
+.caption p::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 45px;
+  background-color: var(--main-color);
+  bottom: -15;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* HOME */
+#home {
+  background-image: url(../img/intro-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#home .home-caption h1 {
+  font-size: calc(1rem + 3vw);
+}
+
+/* ABOUT */
+
+.skill-progress .progress {
+  height: 12px;
+  border-radius: 0;
+}
+
+.about-me h3 {
+  position: relative;
+}
+
+.about-me h3::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100px;
+  background-color: var(--main-color);
+  bottom: -15px;
+  left: 0;
+}
+
+.progress {
+  background-color: var(--secondary-color);
+}
+
+/* Service */
+#services .service svg {
+  border: 8px solid var(--main-color);
+  transition: all 0.5s;
+  height: 50px;
+  width: 50px;
+}
+
+#services .service:hover svg {
+  color: #fff;
+  background-color: var(--main-color);
+  border-color: var(--secondary-color);
+}
+
+/* after services */
+.after-services {
+  background-image: url(../img/counters-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+}
+
+.blue-layer {
+  background-color: var(--main-color);
+  padding: 100px 0;
+  opacity: 0.7;
+}
+
+.after-services .blue-layer svg {
+  border: 10px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px 0;
+  height: 30px;
+  width: 30px;
+}
+
+/* portofolio */
+
+#portofolio .card img{
+  transition: transform 1s;
+  overflow: hidden;
+}
+
+#portofolio .card:hover img {
+  transform: scale(1.2);
+}
+
+/* after portofolio */
+.after-portofolio {
+  background-image: url(../img/overlay-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Blog */
+.blog-image::after {
+  position: absolute;
+  content: 'Travel';
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-color);
+  padding-inline: 15px;
+  padding-block: 3px;
+  border-radius: 5px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.web::after {
+  content: 'Web Design';
+
+}
+
+.card-footer img {
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Contact */
+
+#contact .caption h2 {
+  font-size: 1.5rem;
+}
+
+#contact .caption p::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 100px;
+  background-color: var(--main-color);
+  bottom: -15;
+  left: 0;
+  transform: translate(0);
+}
+
+#contact {
+  background-image: url(../img/overlay-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#contact .contact-area {
+  background-color: #fff;
+}
+
+#contact .contact-text .contact-social svg {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+  color: #000;
+  border: 3px solid var(--main-color);
+  border-radius: 50%;
+  padding: 7px;
+  transition: all 1s;
+}
+
+#contact .contact-text .contact-social svg:hover {
+  color: #fff;
+  background-color: var(--main-color);
+  border: 3px solid var(--secondary-color);
+}
